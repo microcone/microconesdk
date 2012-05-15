@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2494AB3515620D1300C8192C /* MCSectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2494AB3415620D1300C8192C /* MCSectorView.m */; };
+		2494AB3915620EAD00C8192C /* MCUSBDetect.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2494AB3815620EAD00C8192C /* MCUSBDetect.mm */; };
+		2494AB3B1562140100C8192C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2494AB3A1562140100C8192C /* CoreFoundation.framework */; };
+		2494AB3D1562140C00C8192C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2494AB3C1562140C00C8192C /* IOKit.framework */; };
+		2494AB42156215CB00C8192C /* blue-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 2494AB3E156215CB00C8192C /* blue-light.png */; };
+		2494AB43156215CB00C8192C /* gray-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 2494AB3F156215CB00C8192C /* gray-light.png */; };
+		2494AB44156215CB00C8192C /* stereo-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2494AB40156215CB00C8192C /* stereo-gray.png */; };
+		2494AB45156215CB00C8192C /* stereo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2494AB41156215CB00C8192C /* stereo.png */; };
+		2494AB47156216C500C8192C /* stereoTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2494AB46156216C500C8192C /* stereoTemplate.png */; };
+		24F85E221552446800630A7D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F85E211552446800630A7D /* Cocoa.framework */; };
+		24F85E2C1552446800630A7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24F85E2A1552446800630A7D /* InfoPlist.strings */; };
+		24F85E2E1552446800630A7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F85E2D1552446800630A7D /* main.m */; };
+		24F85E321552446800630A7D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 24F85E301552446800630A7D /* Credits.rtf */; };
+		24F85E351552446800630A7D /* MCAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24F85E341552446800630A7D /* MCAppDelegate.mm */; };
+		24F85E381552446800630A7D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F85E361552446800630A7D /* MainMenu.xib */; };
+		24F85E3F155248B400630A7D /* MicroconeAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F85E3E155248B400630A7D /* MicroconeAPI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2494AB3315620D1300C8192C /* MCSectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSectorView.h; sourceTree = "<group>"; };
+		2494AB3415620D1300C8192C /* MCSectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSectorView.m; sourceTree = "<group>"; };
+		2494AB3715620EAD00C8192C /* MCUSBDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUSBDetect.h; sourceTree = "<group>"; };
+		2494AB3815620EAD00C8192C /* MCUSBDetect.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MCUSBDetect.mm; sourceTree = "<group>"; };
+		2494AB3A1562140100C8192C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		2494AB3C1562140C00C8192C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		2494AB3E156215CB00C8192C /* blue-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-light.png"; sourceTree = "<group>"; };
+		2494AB3F156215CB00C8192C /* gray-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-light.png"; sourceTree = "<group>"; };
+		2494AB40156215CB00C8192C /* stereo-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stereo-gray.png"; sourceTree = "<group>"; };
+		2494AB41156215CB00C8192C /* stereo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stereo.png; sourceTree = "<group>"; };
+		2494AB46156216C500C8192C /* stereoTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stereoTemplate.png; sourceTree = "<group>"; };
+		24F85E1D1552446800630A7D /* Microcone Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Microcone Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F85E211552446800630A7D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		24F85E261552446800630A7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24F85E291552446800630A7D /* Microcone Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Microcone Demo-Info.plist"; sourceTree = "<group>"; };
+		24F85E2B1552446800630A7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24F85E2D1552446800630A7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24F85E2F1552446800630A7D /* Microcone Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Microcone Demo-Prefix.pch"; sourceTree = "<group>"; };
+		24F85E311552446800630A7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		24F85E331552446800630A7D /* MCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAppDelegate.h; sourceTree = "<group>"; };
+		24F85E341552446800630A7D /* MCAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MCAppDelegate.mm; sourceTree = "<group>"; };
+		24F85E371552446800630A7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		24F85E3E155248B400630A7D /* MicroconeAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroconeAPI.framework; path = ../../../lib/mac/MicroconeAPI.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24F85E1A1552446800630A7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2494AB3D1562140C00C8192C /* IOKit.framework in Frameworks */,
+				2494AB3B1562140100C8192C /* CoreFoundation.framework in Frameworks */,
+				24F85E3F155248B400630A7D /* MicroconeAPI.framework in Frameworks */,
+				24F85E221552446800630A7D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24F85E121552446800630A7D = {
+			isa = PBXGroup;
+			children = (
+				24F85E271552446800630A7D /* Microcone Demo */,
+				24F85E201552446800630A7D /* Frameworks */,
+				24F85E1E1552446800630A7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24F85E1E1552446800630A7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24F85E1D1552446800630A7D /* Microcone Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24F85E201552446800630A7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2494AB3C1562140C00C8192C /* IOKit.framework */,
+				2494AB3A1562140100C8192C /* CoreFoundation.framework */,
+				24F85E211552446800630A7D /* Cocoa.framework */,
+				24F85E231552446800630A7D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24F85E231552446800630A7D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24F85E3E155248B400630A7D /* MicroconeAPI.framework */,
+				24F85E261552446800630A7D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		24F85E271552446800630A7D /* Microcone Demo */ = {
+			isa = PBXGroup;
+			children = (
+				2494AB3715620EAD00C8192C /* MCUSBDetect.h */,
+				2494AB3815620EAD00C8192C /* MCUSBDetect.mm */,
+				2494AB3315620D1300C8192C /* MCSectorView.h */,
+				2494AB3415620D1300C8192C /* MCSectorView.m */,
+				24F85E331552446800630A7D /* MCAppDelegate.h */,
+				24F85E341552446800630A7D /* MCAppDelegate.mm */,
+				24F85E361552446800630A7D /* MainMenu.xib */,
+				24F85E281552446800630A7D /* Supporting Files */,
+			);
+			path = "Microcone Demo";
+			sourceTree = "<group>";
+		};
+		24F85E281552446800630A7D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2494AB46156216C500C8192C /* stereoTemplate.png */,
+				2494AB3E156215CB00C8192C /* blue-light.png */,
+				2494AB3F156215CB00C8192C /* gray-light.png */,
+				2494AB40156215CB00C8192C /* stereo-gray.png */,
+				2494AB41156215CB00C8192C /* stereo.png */,
+				24F85E291552446800630A7D /* Microcone Demo-Info.plist */,
+				24F85E2A1552446800630A7D /* InfoPlist.strings */,
+				24F85E2D1552446800630A7D /* main.m */,
+				24F85E2F1552446800630A7D /* Microcone Demo-Prefix.pch */,
+				24F85E301552446800630A7D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24F85E1C1552446800630A7D /* Microcone Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24F85E3B1552446800630A7D /* Build configuration list for PBXNativeTarget "Microcone Demo" */;
+			buildPhases = (
+				24F85E191552446800630A7D /* Sources */,
+				24F85E1A1552446800630A7D /* Frameworks */,
+				24F85E1B1552446800630A7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Microcone Demo";
+			productName = "Microcone Demo";
+			productReference = 24F85E1D1552446800630A7D /* Microcone Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24F85E141552446800630A7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Dev-Audio";
+			};
+			buildConfigurationList = 24F85E171552446800630A7D /* Build configuration list for PBXProject "Microcone Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 24F85E121552446800630A7D;
+			productRefGroup = 24F85E1E1552446800630A7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24F85E1C1552446800630A7D /* Microcone Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24F85E1B1552446800630A7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F85E2C1552446800630A7D /* InfoPlist.strings in Resources */,
+				24F85E321552446800630A7D /* Credits.rtf in Resources */,
+				24F85E381552446800630A7D /* MainMenu.xib in Resources */,
+				2494AB42156215CB00C8192C /* blue-light.png in Resources */,
+				2494AB43156215CB00C8192C /* gray-light.png in Resources */,
+				2494AB44156215CB00C8192C /* stereo-gray.png in Resources */,
+				2494AB45156215CB00C8192C /* stereo.png in Resources */,
+				2494AB47156216C500C8192C /* stereoTemplate.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24F85E191552446800630A7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F85E2E1552446800630A7D /* main.m in Sources */,
+				24F85E351552446800630A7D /* MCAppDelegate.mm in Sources */,
+				2494AB3515620D1300C8192C /* MCSectorView.m in Sources */,
+				2494AB3915620EAD00C8192C /* MCUSBDetect.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		24F85E2A1552446800630A7D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24F85E2B1552446800630A7D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24F85E301552446800630A7D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24F85E311552446800630A7D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		24F85E361552446800630A7D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24F85E371552446800630A7D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24F85E391552446800630A7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		24F85E3A1552446800630A7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		24F85E3C1552446800630A7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lib/mac\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Microcone Demo/Microcone Demo-Prefix.pch";
+				INFOPLIST_FILE = "Microcone Demo/Microcone Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		24F85E3D1552446800630A7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lib/mac\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Microcone Demo/Microcone Demo-Prefix.pch";
+				INFOPLIST_FILE = "Microcone Demo/Microcone Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24F85E171552446800630A7D /* Build configuration list for PBXProject "Microcone Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F85E391552446800630A7D /* Debug */,
+				24F85E3A1552446800630A7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24F85E3B1552446800630A7D /* Build configuration list for PBXNativeTarget "Microcone Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F85E3C1552446800630A7D /* Debug */,
+				24F85E3D1552446800630A7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24F85E141552446800630A7D /* Project object */;
+}
