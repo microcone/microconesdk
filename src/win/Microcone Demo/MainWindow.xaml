@@ -1,0 +1,67 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:DevAudio.Microcone.Settings" 
+    mc:Ignorable="d" 
+    x:Class="DevAudio.Microcone.Settings.MainWindow"
+        Title="Microcone" Height="365" Width="540" ResizeMode="CanMinimize" Margin="0" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0">
+        <Grid Margin="0,70,0,25" x:Name="Grid">
+            <Grid.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Grid.Background>
+            <local:SectorView x:Name="SectorView1" HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="200" FontSize="18"/>
+            <Grid Margin="225,20,0,0" x:Name="grid1" Height="250" VerticalAlignment="Top">
+                <Slider Height="173" HorizontalAlignment="Left" Margin="24,0,0,0" x:Name="sliderMaster" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="sliderMaster_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="76,0,0,0" x:Name="slider1" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="114,0,0,0" x:Name="slider2" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="152,0,0,0" x:Name="slider3" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="190,0,0,0" x:Name="slider4" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="228,0,0,0" x:Name="slider5" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="266,0,0,0" x:Name="slider6" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Width="48" Click="Button_Click_Reset"/>
+                <ToggleButton x:Name="Enabled1" Content="1" HorizontalAlignment="Left" Margin="71,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled2" Content="2" HorizontalAlignment="Left" Margin="109,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled3" Content="3" HorizontalAlignment="Left" Margin="147,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled4" Content="4" HorizontalAlignment="Left" Margin="185,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled5" Content="5" HorizontalAlignment="Left" Margin="223,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled6" Content="6" HorizontalAlignment="Left" Margin="261,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+            </Grid>
+        </Grid>
+        <ToggleButton x:Name="DSPEnabled" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click_DSP">
+            <ToggleButton.Template>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Image x:Name="Enabled" Source="blue-light.png"/>
+                        <Image x:Name="Disabled" Source="gray-light.png" Visibility="Hidden"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="Enabled" Property="Visibility" Value="Hidden"/>
+                            <Setter TargetName="Disabled" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </ToggleButton.Template>
+        </ToggleButton>
+        <ToggleButton x:Name="StereoEnabled" HorizontalAlignment="Left" Margin="60,5,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click_Stereo">
+            <ToggleButton.Template>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Image x:Name="Enabled" Source="stereo.png"/>
+                        <Image x:Name="Disabled" Source="stereo-gray.png" Visibility="Hidden"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="Enabled" Property="Visibility" Value="Hidden"/>
+                            <Setter TargetName="Disabled" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </ToggleButton.Template>
+        </ToggleButton>
+        <TextBlock Margin="63,45,0,0" TextWrapping="Wrap" Text="Stereo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40"/>
+    </Grid>
+</Window>
