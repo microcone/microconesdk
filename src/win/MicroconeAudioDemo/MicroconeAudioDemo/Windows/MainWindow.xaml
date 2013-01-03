@@ -1,0 +1,128 @@
+﻿<Window x:Class="Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:microcone="clr-namespace:DevAudio.Microcone"
+        Height="365" Width="540" ResizeMode="CanMinimize" Margin="0" 
+        WindowStartupLocation="CenterScreen" 
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/AppResources.xaml"/>
+                <ResourceDictionary Source="/Resources/AppStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Title>
+        <Binding Source="{StaticResource AppName}"/>
+    </Window.Title>
+    <Window.Icon>
+        <ImageSource>/MicroconeSDKDemo;component/Assets/Images/Microcone App 64.ico</ImageSource>
+    </Window.Icon>
+
+    <Grid Margin="0">
+        <Grid Margin="0,70,0,25" x:Name="Grid">
+            <Grid.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Grid.Background>
+            <microcone:SectorView x:Name="SectorView1" HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="200" FontSize="18"/>
+            <Grid Margin="225,20,0,0" x:Name="grid1" Height="250" VerticalAlignment="Top">
+                <Slider Height="173" HorizontalAlignment="Left" Margin="24,0,0,0" x:Name="sliderMaster" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="sliderMaster_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="76,0,0,0" x:Name="slider1" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="114,0,0,0" x:Name="slider2" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="152,0,0,0" x:Name="slider3" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="190,0,0,0" x:Name="slider4" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="228,0,0,0" x:Name="slider5" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Slider Height="173" HorizontalAlignment="Left" Margin="266,0,0,0" x:Name="slider6" Orientation="Vertical" VerticalAlignment="Top" Width="24" Value="5" ValueChanged="slider_ValueChanged" IsEnabled="False" />
+                <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Width="48" Click="Button_Click_Reset"/>
+                <ToggleButton x:Name="Enabled1" Content="1" HorizontalAlignment="Left" Margin="71,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled2" Content="2" HorizontalAlignment="Left" Margin="109,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled3" Content="3" HorizontalAlignment="Left" Margin="147,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled4" Content="4" HorizontalAlignment="Left" Margin="185,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled5" Content="5" HorizontalAlignment="Left" Margin="223,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+                <ToggleButton x:Name="Enabled6" Content="6" HorizontalAlignment="Left" Margin="261,178,0,0" VerticalAlignment="Top" Width="34" Click="Button_Click_Enabled"/>
+            </Grid>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ToggleButton x:Name="DSPEnabled" Grid.Column="0" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click_DSP"
+                          ToolTip="Microcone Signal Processing">
+                <ToggleButton.Template>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Grid>
+                            <Image x:Name="Enabled" Source="/MicroconeSDKDemo;component/Assets/Images/blue-light.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            <Image x:Name="Disabled" Source="/MicroconeSDKDemo;component/Assets/Images/gray-light.png" RenderOptions.BitmapScalingMode="Fant"
+                                   Visibility="Hidden"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="Enabled" Property="Visibility" Value="Hidden"/>
+                                <Setter TargetName="Disabled" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </ToggleButton.Template>
+            </ToggleButton>
+            <ToggleButton x:Name="StereoEnabled" Grid.Column="1" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Top" Width="40" Height="40" Click="Button_Click_Stereo"
+                          ToolTip="Microcone Stereo Mode">
+                <ToggleButton.Template>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Grid>
+                            <Image x:Name="Enabled" Source="/MicroconeSDKDemo;component/Assets/Images/stereo.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            <Image x:Name="Disabled" Source="/MicroconeSDKDemo;component/Assets/Images/stereo-gray.png" RenderOptions.BitmapScalingMode="Fant"
+                                   Visibility="Hidden"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="Enabled" Property="Visibility" Value="Hidden"/>
+                                <Setter TargetName="Disabled" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </ToggleButton.Template>
+            </ToggleButton>
+            <TextBlock Grid.Column="1" Margin="0,50" TextWrapping="Wrap" Text="Stereo" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" Width="40"/>
+            <Grid Grid.Column="3" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"  x:Name="recordButton"  BorderBrush="Transparent" BorderThickness="0" Focusable="True"
+                                Height="64" HorizontalAlignment="Center" 
+                                Width="49"  VerticalAlignment="Top" 
+                                Style="{StaticResource CustomButtonStyle}" ToolTip="Start/Pause Recording" 
+                                Click="Button_Click_Record">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/MicroconeSDKDemo;component/Assets/Images/Record48.png" Stretch="None"/>
+                    </Button.Background>
+                </Button>
+                <Button Grid.Column="1" x:Name="stopButton" BorderBrush="Transparent" BorderThickness="0" Focusable="True" 
+                        Height="64" HorizontalAlignment="Center" 
+                        Width="45"  VerticalAlignment="Top" 
+                        Style="{StaticResource CustomButtonStyle}"  ToolTip="Stop Recording"
+                        Click="Button_Click_Stop">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/MicroconeSDKDemo;component/Assets/Images/Stop40.png" Stretch="None" />
+                    </Button.Background>
+                </Button>
+                <Button Grid.Column="2" x:Name="browseButton" BorderBrush="Transparent" BorderThickness="0" Focusable="True" 
+                        Height="64" HorizontalAlignment="Center" 
+                        Width="45"  VerticalAlignment="Top" 
+                        Style="{StaticResource CustomButtonStyle}"  ToolTip="Browse To Most Recent Recording" Click="browseButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/MicroconeSDKDemo;component/Assets/Images/Folder.png" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" />
+                    </Button.Background>
+                </Button>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

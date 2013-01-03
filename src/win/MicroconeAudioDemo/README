@@ -1,0 +1,4 @@
+This directory contains an example application that shows how to use the Microcone API and also record audio from the Microcone.
+
+The audio recording functionality uses the NAudio library: http://naudio.codeplex.com/
+
